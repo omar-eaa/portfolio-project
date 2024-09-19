@@ -1,0 +1,40 @@
+.intro{
+    position: fixed;
+    z-index: 100000000000000000000000000000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s ;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffff;
+}
+#dev-color{
+    color: #5A7FFB;
+
+}
+.animated{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.animated.active{
+    bottom: 0;
+    opacity: 1; 
+    transition: ease-in-out 0.5s;
+}
+
+.animated.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}

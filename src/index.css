@@ -1,0 +1,757 @@
+
+
+
+
+
+#a-tag-cv{
+    text-decoration: none;
+    color: inherit;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    /* Ensure padding and borders are included in the element's width and height */
+}
+
+
+/* front page background image */
+.front-page {
+    background: url(./img/background-image-frontPage.jpg);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 16% 4% 10%;
+    position: relative;
+    /* Ensure the front-page doesn't overlap the header */
+    z-index: 1;
+    /* Lower z-index to keep it behind the header */
+}
+
+/* front page content */
+.content-front-page {
+    display: flex;
+    gap: 30rem;
+    padding-left: 10%;
+}
+
+.front-page-left-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: -35px;
+}
+
+.front-page-right-area {}
+
+/* front page image styling */
+.rounded-border {
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    width: 349px;
+}
+
+.front-page-profile-img {
+    border-radius: 15rem;
+    width: 320px;
+    margin-left: -33%;
+}
+
+/* Base styles for the header */
+.header-container {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 60%;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    /* Absolute positioning to stay on top of the front page */
+    top: 0;
+    left: -60px;
+    width: 100%;
+    z-index: 1000;
+    /* High z-index to stay in front of content */
+    transition: background-color 0.3s ease;
+}
+
+/* Sticky header styles */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-name {
+    font-size: 1.5rem;
+    padding-left: 2%;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* Navigation menu */
+.link-container {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+/* Hide the nav links on mobile initially */
+.link-container.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    z-index: 1001;
+    /* Dropdown menu should be above content */
+}
+
+/* Consistent class name for the navigation list */
+.ul-container {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for navigation items */
+.li-item a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    color: #5A7FFB;
+    cursor: pointer;
+}
+
+/* Desktop nav styles */
+@media (min-width: 768px) {
+    .hamburger-icon {
+        display: none;
+        /* Hidden on desktop */
+    }
+
+    .link-container {
+        display: flex;
+        /* Flex layout for desktop */
+        position: relative;
+    }
+
+    .ul-container {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+/* Mobile nav styles */
+@media (max-width: 768px) {
+
+
+    .header-container {
+        display: flex;
+        /* justify-content: space-between; */
+        gap: 60%;
+
+    }
+
+
+
+
+
+    .hamburger-icon {
+        display: block;
+        /* Show the hamburger icon on mobile */
+
+    }
+
+
+
+    .link-container {
+        display: none;
+        /* Hidden initially */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .link-container.active {
+        display: block;
+        /* Show dropdown on click */
+    }
+
+    .ul-container {
+        display: block;
+        text-align: center;
+    }
+
+    .li-item {
+        border-bottom: 1px solid #444;
+    }
+
+    .li-item a {
+        padding: 1rem;
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+
+
+    /* front page styling */
+    .content-front-page {
+        display: flex;
+        gap: 5rem;
+        flex-direction: column;
+        padding-left: 20%;
+        padding-bottom: 10%;
+    }
+
+    .front-page-profile-img {
+        border-radius: 15rem;
+        width: 300px;
+        margin-left: 1%;
+    }
+
+    .rounded-border {
+        position: absolute;
+        left: 26%;
+        top: 50%;
+        width: 300px;
+    }
+}
+
+/* Correct the typo and ensure consistent class name */
+.logo-name span {
+    color: #5A7FFB;
+}
+
+/* front page Intro name styling */
+.h1-frontPage {
+    font-size: 5rem;
+}
+
+.h1-frontPage span {
+    font-size: 2rem;
+}
+
+strong {
+    color: #5A7FFB;
+}
+
+/* text animation styling */
+.animate-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+    margin-top: -14%;
+    margin-bottom: 14%;
+}
+
+/* Blinking cursor effect */
+.cursor {
+    font-weight: 100;
+    font-size: 2.5rem;
+    color: #5A7FFB;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* link-group styling front page */
+.link-group {
+    display: flex;
+    gap: 3%;
+}
+
+/* Buttons styling */
+.btn-main {
+    padding: 15px 42px;
+    background: #5a7ffb;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-text {
+    color: #5a7ffb;
+    text-decoration: none;
+    transition: 0.3s;
+    padding-top: 1%;
+    font-size: 1.5rem;
+}
+
+
+/* -----------------------------------about me styling section */
+
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    padding-left: 10%;
+    gap: 10%;
+}
+
+.about-img {
+    height: auto;
+    width: 34%;
+}
+
+
+.about-me-h2-p-container{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.about-me-text-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.about-me-text-container h2 {
+    font-size: 20px;
+    color: #5a7ffb;
+}
+
+.about-me-text-container p {
+    width: 70%;
+    /* Keeps it limited for better readability */
+    font-size: 18px;
+    /* Readable font size */
+    color: #615978;
+    /* Subtle text color */
+    line-height: 1.6;
+    /* Improves spacing between lines */
+    text-align: justify;
+    /* Aligns text evenly on both sides */
+    /* Adds slight padding */
+    word-spacing: 0.05rem;
+    /* Slightly increases space between words */
+    letter-spacing: 0.02rem;
+    /* Adds a bit of letter spacing */
+}
+
+
+.about-me-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    /* Two equal columns */
+    gap: 20px;
+    /* Space between grid items */
+    width: 70%;
+    /* Adjust width for layout */
+    
+    /* Center the grid container */
+}
+
+.about-me-grid h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-me-grid p {
+    font-size: 18px;
+    color: #615978;
+    margin: 0;
+    /* Removes default paragraph margins */
+}
+
+.about-me-grid a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5A7FFB;
+    /* Button background */
+    color: white;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 5px;
+    /* Slightly rounded corners */
+    font-weight: bold;
+    /* Bold text */
+    text-align: center;
+    /* Center the text */
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+    width: fit-content;
+    /* Adjust width to fit content */
+    margin-top: 20px;
+    /* Add space between grid and button */
+}
+
+.about-me-grid a:hover {
+    background-color: #3f63db;
+    /* Darken background on hover */
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .image-container {
+        /* display: flex;
+        justify-content: center;
+        padding-top: 10%;
+        padding-left: 10%;
+        gap: 10%; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img {
+            width: 60%;
+            padding-bottom: 9%;
+    }
+}
+
+
+/* -------------------------------- skills icon styling  */
+
+
+.skills-icons {
+    padding-top: 9%;
+}
+
+.skills-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #5A7FFB;
+    /* Background for the icons */
+    padding: 20px 0;
+
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    /* Increased space between icons */
+    animation: scrollIcons 20s linear infinite;
+    /* Infinite scroll animation */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    /* Increased space between icons */
+}
+
+.icon-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Infinite scroll animation from left to right */
+@keyframes scrollIcons {
+    0% {
+        transform: translateX(0);
+        /* Start from initial position */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Move left until out of view */
+    }
+}
+
+
+
+
+
+/* ------------------------------------------------------portfolio work section  styling  */
+
+
+
+
+.project-container {
+    padding-top: 10%;
+}
+
+/* Portfolio layout styles */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 6%;
+}
+
+.filter-buttons button {
+    background-color: #5A7FFB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.filter-buttons button:hover {
+    background-color: #4e6ad6;
+}
+
+.filter-buttons button.active {
+    background-color: #415bb7;
+}
+
+/* Grid layout for 'All' button */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* Special layout for 'All' filter */
+.project-grid.all-grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+}
+
+/* Flexbox layout for other filters (React.js, JavaScript, HTML/CSS) */
+.project-grid.flex-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Styling for project items (applies to both layouts) */
+.project-item {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 570px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+/* Hover effect */
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+
+/* For tablets and larger screens */
+@media (max-width: 1024px) {
+    .project-grid {
+        width: 90%;
+    }
+
+    .project-grid.all-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for tablet view */
+    }
+
+    .project-item {
+        max-width: 50%;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .project-grid {
+        width: 50%;
+        gap: 50px;
+        margin-left: 23%;
+        margin-right: 23%;
+
+    }
+
+    .project-grid.all-grid-layout {
+        grid-template-columns: repeat(1, 1fr);
+        /* 1 column for mobile view */
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .project-item {
+        max-width: 100%;
+
+    }
+}
+
+
+
+
+
+/* -----------------------------------Contact me styling  */
+
+.contact-container{
+    padding-top: 15%;
+    display: flex;
+    justify-content: center;
+    
+}
+.contact-section {
+    text-align: center;
+
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+
+}
+
+.contact-section h2 {
+    color: #5A7FFB;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.contact-section .emoji {
+    font-size: 1.2em;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-item {
+    text-align: center;
+    width: 150px;
+}
+
+.contact-item img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+
+/* ------------------------------- footer styling */
+
+.footer{
+   background-color: #2D2D2D;
+   color: white;
+   margin-top: 10%;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50%;
+}
+
+
+.footer-icons a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 60%;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  
+    .footer-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+    }
+}
