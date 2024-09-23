@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import aboutMe from "../img/about-me.jpg"; // Ensure correct path
-
+import heroImg2 from "../assets/img/img-ofMe/hero-img-2.jpg"
 export default function AboutMeImage() {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
@@ -26,7 +25,9 @@ export default function AboutMeImage() {
             ref={ref}
             className={`image-container ${isVisible ? 'animate-slide-in' : ''}`}
             >
-            <img className="about-img" src="../../public/img-ofMe/hero-img-2.jpg" alt="About Me" />
+            {/* <img className="about-img" src="../../public/img-ofMe/hero-img-2.jpg" alt="About Me" /> */}
+            <img className="about-img" src={heroImg2} alt="About Me" />
+
             <div id="aboutMeLink" className="about-me-text-container">
                 <div className="about-me-h2-p-container">
                     <h2>ABOUT ME</h2>

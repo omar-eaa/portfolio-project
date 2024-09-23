@@ -21,7 +21,7 @@ body {
 
 /* front page background image */
 .front-page {
-    background: url(./img/background-image-frontPage.jpg);
+    background: url(/src/assets/img/background-image-frontPage.jpg);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@ body {
 /* front page content */
 .content-front-page {
     display: flex;
-    gap: 30rem;
+    gap: 22rem;
     padding-left: 10%;
 }
 
@@ -65,7 +65,7 @@ body {
 .header-container {
     display: flex;
     /* justify-content: space-between; */
-    gap: 60%;
+    gap: 53%;
     align-items: center;
     padding: 2rem 4rem;
     background-color: transparent;
